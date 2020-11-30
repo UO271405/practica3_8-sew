@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="Ejercicio8.js"></script>
+        <link rel="stylesheet" href="Ejercicio8.css"/>
+    </head>
+    <body>
+        
+        <h1>Meteorología de los siguientes hitos:</h1>
+        <h2>Lisboa</h2>
+        <button id = "TiempoEnLisboa" onclick = "meteo.cargarDatos('Lisbon', 'PT');">Ver meteorología</button>
+        
+        <h2>Madrid</h2>
+        <button id = "TiempoEnOviedo" onclick = "meteo.cargarDatos('Madrid', 'ES')">Ver meteorología</button>
+        
+        
+        <h2>Valencia</h2>
+        <button id = "TiempoEnValencia" onclick = "meteo.cargarDatos('Valencia', 'ES');">Ver meteorología</button>
+        
+        <h2>Mallorca</h2>
+        <button id = "TiempoEnMallorca" onclick = "meteo.cargarDatos('Palma', 'ES');">Ver meteorología</button>
+        
+        <h2>Roma</h2>
+        <button id = "TiempoEnRoma" onclick = "meteo.cargarDatos('Rome', 'IT');">Ver meteorología</button>
+        
+        <h3>JSON:</h3>
+        <pre class="json"></pre>
+        <h3>Meteorología del lugar:</h3>
+        <p class="datos"></p>
+    </body>
+</html>
