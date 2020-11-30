@@ -4,11 +4,11 @@ class Meteo{
         this.apikey = "47b790fd0fc41878c80c57c9846132cb";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
-        this.error = "<h2>¡problemas! No puedo obtener información de <a href='http://openweathermap.org'>OpenWeatherMap</a></h2>";
+        this.error = "<h2>¡problemas! No puedo obtener información de <a href='https://openweathermap.org'>OpenWeatherMap</a></h2>";
     }
     
     cargarDatos(ciudad, codigoPais){
-        var url = "http://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "," + codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
+        var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "," + codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
         
         $.ajax({
             dataType: "json",
@@ -18,7 +18,7 @@ class Meteo{
                 $('.json').text(JSON.stringify(datos, null, 2));
 
                 $('.datos').empty();    
-                $('.datos').append('<img src="http://openweathermap.org/img/w/' + datos.weather[0].icon + '.png" height="64px" width="64px">');
+                $('.datos').append('<img src="https://openweathermap.org/img/w/' + datos.weather[0].icon + '.png" height="64px" width="64px">');
                 $('.datos').append("<p>Ciudad: " + datos.name + "<br>");
                 $('.datos').append("País: " + datos.sys.country + "<br>");
                 $('.datos').append("Latitud: " + datos.coord.lat + " grados<br>");
@@ -43,7 +43,7 @@ class Meteo{
         });
     }
 
-    verJSON(ciudad, codigoPais, elem){
+    verJSON(ciudad, codigoPais){
         this.cargarDatos(ciudad, codigoPais);
     }
 }
