@@ -18,8 +18,8 @@ class Meteo{
                 $('.json').text(JSON.stringify(datos, null, 2));
 
                 $('.datos').empty();    
-                $('.datos').append('<img src="https://openweathermap.org/img/w/' + datos.weather[0].icon + '.png" height="64px" width="64px">');
-                $('.datos').append("<p>Ciudad: " + datos.name + "<br>");
+                $('.datos').append('<img src="https://openweathermap.org/img/w/' + datos.weather[0].icon + '.png" alt="img weather">');
+                $('.datos').append("<br>Ciudad: " + datos.name + "<br>");
                 $('.datos').append("País: " + datos.sys.country + "<br>");
                 $('.datos').append("Latitud: " + datos.coord.lat + " grados<br>");
                 $('.datos').append("Longitud: " + datos.coord.lon + " grados<br>");
@@ -35,7 +35,7 @@ class Meteo{
                 $('.datos').append("Fecha de la medida: " + new Date(datos.dt *1000).toLocaleDateString() + "<br>");
                 $('.datos').append("Descripción: " + datos.weather[0].description + "<br>");
                 $('.datos').append("Visibilidad: " + datos.visibility + " metros<br>");
-                $('.datos').append("Nubosidad: " + datos.clouds.all + " %</p>");
+                $('.datos').append("Nubosidad: " + datos.clouds.all + " %");
             },
             error:function(){
                 document.write(this.error);    
