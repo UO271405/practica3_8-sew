@@ -6,6 +6,7 @@ body{
     margin-left: 3em;
 }
 
+/*especificidad -> 1*/
 img{
     height: 3.938em;
     width: 3.938em;
